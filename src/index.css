@@ -28,20 +28,22 @@ h1{
   border: 5px solid green;
   padding: 25px;
   margin: 50px;
+  border-radius: 10px;
 }
 .nav{
   display: flex;
   align-content: space-around;
-  background-color: lightblue;
+  background-color: rgb(181, 234, 252);
   
 }
 
 h4{
+  font-family: Georgia;
   margin:2rem;
   width:max-content;
   font-size: 1.5rem;
   cursor: pointer;
-  color: red;
+  color: rgb(8, 6, 6);
 }
 
 a{
