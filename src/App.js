@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import Items from "./pages/Items"
 import Navbar from "./components/Navbar";
 import ItemDetails from "./pages/ItemDetails";
+import ErrorPage from "./pages/ErrorPage";
 function App() {
   // Second way to create route
   // const routes = createRoutesFromElements(
@@ -26,12 +27,14 @@ function App() {
     { 
       path :'/',
       element :<Navbar/>,
+      errorElement :<ErrorPage/>,
       children :[
         // {path : "", element : <Home/>},
         {index : true, element : <Home/>},
         {path : "about", element :<About/>},
         {
            path : 'items',
+          //  errorElement :<ErrorPage/>,
            children : [
              { index: true, element : <Items/>},
              {
