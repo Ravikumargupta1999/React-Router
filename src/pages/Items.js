@@ -12,7 +12,10 @@ function Items(){
            <ul>
              
               {ITEMS.map((item) =>(
-                 <li>{item.id}</li>
+                <Link to = {`/items/${item.id}`}>
+                   <li>{item.id}</li>
+                </Link>
+          
               ))}
            </ul>
         </>
