@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 function About(){
     return(
         <> 
+         <Navbar/>
            <main>
-               <h6>About Page</h6>
+               <h1>About Page</h1>
                <Link to = "/">Back</Link>
            </main>
          
