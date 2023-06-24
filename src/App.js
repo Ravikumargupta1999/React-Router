@@ -1,18 +1,18 @@
-import { useState } from "react"
-import Navbar from "./components/Navbar"
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+
 import About from "./pages/About"
 import Home from "./pages/Home"
 import Items from "./pages/Items"
 
 function App() {
-  const [page, setPage] = useState("items");
+  const router = createBrowserRouter([
+    {path : "/", element : <Home/>},
+    {path : "/about", element :<About/>},
+  ])
   return (
 
     <>
-      <Navbar setPage={setPage} />
-      {page === "home" && <Home />}
-      {page === "about" && <About />}
-      {page === "items" && <Items />}
+      <RouterProvider router={router}/>
     </>
   );
 }
