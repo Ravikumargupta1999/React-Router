@@ -12,11 +12,11 @@ import Navbar from "./components/Navbar";
 function App() {
   // Second way to create route
   // const routes = createRoutesFromElements(
-  //   <> 
-  //      <Route path = "/" element = {<Home/>}/>
+  //   <Route path="/" element = {<Navbar/>}> 
+  //      <Route index element = {<Home/>}/>
   //      <Route path = "/about" element = {<About/>}/>
   //      <Route path = "/items" element = {<Items/>}/>
-  //   </>
+  //   </Route>
   // );
   // const router = createBrowserRouter(routes);
 
@@ -24,13 +24,13 @@ function App() {
   // First way to create route
   const router = createBrowserRouter([
     { 
-      path :'/',
+      path :'/root',
       element :<Navbar/>,
       children :[
         // {path : "", element : <Home/>},
         {index : true, element : <Home/>},
-        {path : "/about", element :<About/>},
-        {path : "/items", element :<Items/>}
+        {path : "about", element :<About/>},
+        {path : "items", element :<Items/>}
     ]},
   ])
 
