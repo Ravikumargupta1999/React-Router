@@ -30,10 +30,16 @@ function App() {
         // {path : "", element : <Home/>},
         {index : true, element : <Home/>},
         {path : "about", element :<About/>},
-        {path : "items", element :<Items/>},
         {
-           path : 'items/:id',
-           element : <ItemDetails/>
+           path : 'items',
+           children : [
+             { index: true, element : <Items/>},
+             {
+               path : ':id',
+               element : <ItemDetails/>
+             }
+           ]
+           
         }
     ]},
   ])

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ItemDetails from "./ItemDetails";
+import { ITEMS } from "../data/itemData";
 function Items(){
     return(
         <> 
@@ -9,17 +10,10 @@ function Items(){
                <h1>Items Page</h1>
            </main>
            <ul>
-              <Link to = "/items/item-1">
-                  <li>Item-1</li>
-              </Link>
-
-              <Link to = "/items/item-2">
-                  <li>Item-2</li>
-              </Link>
-
-              <Link to = "/items/item-3">
-                  <li>Item-3</li>
-              </Link>
+             
+              {ITEMS.map((item) =>(
+                 <li>{item.id}</li>
+              ))}
            </ul>
         </>
     )
