@@ -8,6 +8,7 @@ function App() {
   const router = createBrowserRouter([
     {path : "/", element : <Home/>},
     {path : "/about", element :<About/>},
+    {path : "/items", element :<Items/>},
   ])
   return (
 
